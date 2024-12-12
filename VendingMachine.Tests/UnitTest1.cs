@@ -34,4 +34,15 @@ public class UnitTest1
         // Assert
         Assert.Equal(expected, coinValue);
     }
+    [Fact]
+    public void Dispalay_INSERTCOIN_WhenBalanceIsZero()
+    {
+        // Arrange
+        VendingMachine testMachine = new();
+        string expected = "INSERT COIN";
+        // Act
+        testMachine.balance = 0;
+        // Assert
+        Assert.Equal(testMachine.onDisplay, expected);
+    }
 }

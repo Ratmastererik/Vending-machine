@@ -2,7 +2,14 @@
 
 public class VendingMachine
 {
-   
+    public VendingMachine()
+    {
+        onDisplay = "INSERT COIN";
+    }
+    public string onDisplay { get; set; }
+    public string[] products = ["cola", "chips", "candy"];
+    public int[] prize = [100, 50, 65];
+    public int balance { get; set; }
     int Nickle = 5;
     int Dime = 10;
     int Quarter = 25;
