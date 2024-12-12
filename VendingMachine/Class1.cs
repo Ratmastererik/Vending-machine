@@ -9,7 +9,7 @@ public class VendingMachine
     public string onDisplay { get; set; }
     public string[] products = ["cola", "chips", "candy"];
     public int[] prize = [100, 50, 65];
-    public int balance { get; set; }
+    public int totalAmount { get; set; }
     int Nickle = 5;
     int Dime = 10;
     int Quarter = 25;
@@ -36,7 +36,6 @@ public class VendingMachine
 
     public int identifyCoins(List<string> coinType)
     {
-        int totalAmount = 0;
         for (int i = 0; i < coinType.Count; i++)
         {
             switch (coinType[i])

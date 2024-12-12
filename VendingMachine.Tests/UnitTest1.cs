@@ -41,7 +41,7 @@ public class UnitTest1
         VendingMachine testMachine = new();
         string expected = "INSERT COIN";
         // Act
-        testMachine.balance = 0;
+        testMachine.totalAmount = 0;
         // Assert
         Assert.Equal(testMachine.onDisplay, expected);
     }
