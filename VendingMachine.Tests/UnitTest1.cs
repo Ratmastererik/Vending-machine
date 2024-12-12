@@ -45,18 +45,32 @@ public class UnitTest1
         // Assert
         Assert.Equal(testMachine.onDisplay, expected);
     }
-    [Fact]
-    public void ProductIsSelected()
+    [Theory]
+    [InlineData(0)]
+    [InlineData(1)]
+    [InlineData(2)]
+    public void ProductIsSelected(int productID)
     {
         {
             VendingMachine testMachine = new();
             // Arrange
-            string actual = testMachine.SelectProduct(Random.Shared.Next(0, 3));
+            string actual = testMachine.SelectProduct(productID);
 
             // Act
 
             // Assert
             Assert.Contains(actual, testMachine.products);
         }
+    }
+    [Fact]
+    public void InsertNickleWillChange_totalAmountTo()
+    {
+        // Arrange
+        VendingMachine testMachine = new();
+        // Act
+        testMachine.insertCoin("Nicle");
+
+        // Assert
+        Assert.True(testMachine.totalAmount == 5);
     }
 }
