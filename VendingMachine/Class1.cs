@@ -2,25 +2,25 @@
 
 public class VendingMachine
 {
+   
+    int Nickle = 5;
+    int Dime = 10;
+    int Quarter = 25;
+
     public static void Main()
     {
 
     }
 
-    int Nickle = 5;
-    int Dime = 10;
-    int Quarter = 25;
-    int Penny = 0;
-
     public int AcceptCoin(int coin)
     {
         switch (coin)
         {
-            case (5):
+            case 5:
                 return coin;
-            case (10):
+            case 10:
                 return coin;
-            case (25):
+            case 25:
                 return coin;
             default:
                 return coin;
