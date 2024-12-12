@@ -45,4 +45,18 @@ public class UnitTest1
         // Assert
         Assert.Equal(testMachine.onDisplay, expected);
     }
+    [Fact]
+    public void ProductIsSelected()
+    {
+        {
+            VendingMachine testMachine = new();
+            // Arrange
+            string actual = testMachine.SelectProduct(Random.Shared.Next(0, 3));
+
+            // Act
+
+            // Assert
+            Assert.Contains(actual, testMachine.products);
+        }
+    }
 }

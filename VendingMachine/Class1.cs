@@ -56,4 +56,8 @@ public class VendingMachine
         }
         return totalAmount;
     }
+    public string SelectProduct(int ProductID)
+    {
+        return products[ProductID];
+    }
 }
