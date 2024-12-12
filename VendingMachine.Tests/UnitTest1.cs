@@ -62,4 +62,15 @@ public class UnitTest1
             Assert.Contains(actual, testMachine.products);
         }
     }
+    [Fact]
+    public void InsertNickleWillChange_totalAmountTo()
+    {
+        // Arrange
+        VendingMachine testMachine = new();
+        // Act
+        testMachine.insertCoin("Nicle");
+
+        // Assert
+        Assert.True(testMachine.totalAmount == 5);
+    }
 }
