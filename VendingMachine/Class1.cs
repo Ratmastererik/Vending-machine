@@ -2,10 +2,6 @@
 
 public class VendingMachine
 {
-    public VendingMachine()
-    {
-        onDisplay = "INSERT COIN";
-    }
     public string onDisplay { get; set; }
     public string[] products = ["cola", "chips", "candy"];
     public int[] prize = [100, 50, 65];
@@ -17,6 +13,11 @@ public class VendingMachine
     public static void Main()
     {
 
+    }
+
+    public VendingMachine()
+    {
+        onDisplay = "INSERT COINS";
     }
 
     public int AcceptCoin(int coin)
