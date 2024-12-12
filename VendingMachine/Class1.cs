@@ -34,9 +34,6 @@ public class VendingMachine
         {
             switch (coinType[i])
             {
-                case "Penny":
-                    totalAmount = Penny;
-                    break;
                 case "Nickle":
                     totalAmount += AcceptCoin(Nickle);
                     break;
